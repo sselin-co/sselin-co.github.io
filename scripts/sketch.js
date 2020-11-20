@@ -10,9 +10,8 @@ const totalPoints = 1000;
 const capacity = 10;
 function setup(){
     canvas = createCanvas(windowWidth, windowHeight);
-    canvas.style('z-index', '-1');
-    canvas.position(0,0); 
-    r = new Rectangle(0, 0, windowWidth, windowHeight);
+    canvas.parent('canvas');
+    r = new Rectangle(0, 0, width, height);
     quadTree = new QuadTree(r, capacity);
     setQuadTree(quadTree);
       
