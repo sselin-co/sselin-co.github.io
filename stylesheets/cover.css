@@ -126,7 +126,7 @@ body {
     }
 } */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 35rem) {
   .nav-masthead {
     float:none;
     display: block;
@@ -146,7 +146,7 @@ body {
   
 }
 
-@media screen and (max-width: 390px){
+@media screen and (max-width: 25rem){
   .nav-masthead {
     margin-bottom: 75px;
   }
