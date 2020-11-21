@@ -47,7 +47,6 @@ body {
 }
 
 .img-fluid{
-  vertical-align: middle;
   width: 250px;
   height: 250px;
   border-radius: 5%;
@@ -69,6 +68,7 @@ body {
 /*
  * Header
  */
+
 .masthead {
   margin-bottom: 0rem;
 }
