@@ -21,6 +21,7 @@ a:hover {
 }
 
 
+
 /*
  * Base structure
  */
@@ -75,6 +76,11 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  float: left;
+}
+
+.nav-masthead {
+  float: right;
 }
 
 .nav-masthead .nav-link {
@@ -99,21 +105,33 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
+/* @media (min-width: 900px) {
   .masthead-brand {
     float: left;
   }
   .nav-masthead {
     float: right;
-  }
+  } */
+  
 
-  @media (min-width: 10em) {
+  /* @media (min-width: 400px) {
     .masthead-brand {
       float: left;
     }
     .nav-masthead {
       float: right;
     }
+} */
+
+@media screen and (max-width: 600px) {
+  .nav-link {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  .masthead-brand {
+    float: none;
+  }
 }
 
 
