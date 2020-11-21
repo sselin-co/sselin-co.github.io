@@ -146,6 +146,12 @@ body {
   
 }
 
+@media screen and (max-width: 390px){
+  .nav-masthead {
+    margin-bottom: 75px;
+  }
+}
+
 
 /*
  * Cover
