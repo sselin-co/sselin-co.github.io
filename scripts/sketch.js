@@ -58,7 +58,7 @@ function show(quadTree) {
     rectMode(CENTER);
     if (quadTree.points == 0){
         fill(40,50,60);
-        //rect(quadTree.boundary.x, quadTree.boundary.y, quadTree.boundary.w * 2, quadTree.boundary.h * 2);
+        rect(quadTree.boundary.x, quadTree.boundary.y, quadTree.boundary.w * 2, quadTree.boundary.h * 2);
         push();
         noStroke();
         translate(quadTree.boundary.x, quadTree.boundary.y);
@@ -66,7 +66,7 @@ function show(quadTree) {
         pop();
     }
     else{
-        //rect(quadTree.boundary.x, quadTree.boundary.y, quadTree.boundary.w * 2, quadTree.boundary.h * 2);
+        rect(quadTree.boundary.x, quadTree.boundary.y, quadTree.boundary.w * 2, quadTree.boundary.h * 2);
         push();
         fill(37,41,52);
         translate(quadTree.boundary.x, quadTree.boundary.y);
