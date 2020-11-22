@@ -62,7 +62,7 @@ function show(quadTree) {
         push();
         noStroke();
         translate(quadTree.boundary.x, quadTree.boundary.y);
-        box(quadTree.boundary.x, quadTree.boundary.y, quadTree.points.length);
+        //box(quadTree.boundary.x, quadTree.boundary.y, quadTree.points.length);
         pop();
     }
     else{
@@ -70,7 +70,7 @@ function show(quadTree) {
         push();
         fill(37,41,52);
         translate(quadTree.boundary.x, quadTree.boundary.y);
-        box(quadTree.boundary.x/10, quadTree.boundary.y/10, quadTree.points.length*20);
+        //box(quadTree.boundary.x/10, quadTree.boundary.y/10, quadTree.points.length*20);
         pop();
     }
     
