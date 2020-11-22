@@ -52,26 +52,17 @@ function draw(){
 
 function show(quadTree) {
     
-    stroke(0);
+    stroke(25);
     noFill();
     strokeWeight(1);
     rectMode(CENTER);
-    if (quadTree.points == 0){
+    if (quadTree.points.length == 0){
         fill(40,50,60);
         rect(quadTree.boundary.x, quadTree.boundary.y, quadTree.boundary.w * 2, quadTree.boundary.h * 2);
-        push();
-        noStroke();
-        translate(quadTree.boundary.x, quadTree.boundary.y);
-        //box(quadTree.boundary.x, quadTree.boundary.y, quadTree.points.length);
-        pop();
     }
     else{
         rect(quadTree.boundary.x, quadTree.boundary.y, quadTree.boundary.w * 2, quadTree.boundary.h * 2);
-        push();
         fill(37,41,52);
-        translate(quadTree.boundary.x, quadTree.boundary.y);
-        //box(quadTree.boundary.x/10, quadTree.boundary.y/10, quadTree.points.length*20);
-        pop();
     }
     
     // for (let p of quadTree.points) {
