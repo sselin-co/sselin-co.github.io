@@ -34,22 +34,155 @@
       </div>
     </header>
     
-    <main role="main" class="inner cover">
-      <h1 class="cover-heading">My Portfolio 🖥</h1>
-      <p class="lead">I've got some fun stuff planned for this page! Please come back later when the page is more populated.</p>
+    <main role="main" class="inner cover">  
+      <section>
+        <div class="container">
+          <h1 class="cover-heading" id="cover-heading">My Portfolio 🖥</h1>
+          <p class="lead">Here is a selection of the projects I'm most proud of.</p>
+          <br>
+          <div class="item" id="1">
+            <img src="\img\pa_mvp_image.png" alt="Project Access Project Dashboard">
+            <div class="text">
+              <h3>Project Access Platform</h3>
+              <p>Winning MVP proposal for fullstack learning management system.</p>
+            </div>
+            <div class="button">Learn More</div>
+          </div>
+    
+          <div class="item" id="2">
+            <img src="img/simulator-default-resized.gif" alt="">
+            <div class="text">
+              <h3>Epidemic Simulator App</h3>
+              <p>Android app that simulates disease growth in a closed population.</p>
+            </div>
+            <div class="button">Learn More</div>
+          </div>
+    
+          <div class="item" id="3">
+            <img src="/img/bchacks.png" alt="">
+            <div class="text">
+                <h3>BCHacks 2.0 Website</h3>
+              <p>Website to promote the BCHacks Hackathon.</p>
+              </div>
+              <div class="button">Learn More</div>
+          </div>
+      </div>
+    
+      <!-- Modal -->
+      <div id="preview" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img class="img-fluid" id="img" src="">
+          <div id="details">
+            <h3 id="title"></h3>
+            <p id="info">Some text</p>
+            <div class="button" id="live">View</div>
+            <i class="fab fa-github" id="github">GitHub</i>
+          </div>
+        </div>
+      </div>
+    </section>
     </main>
 
     <footer class="mastfoot mt-auto">
       <div class="inner">
-        <p>Made with ❤ by <a href="https://github.com/sselin-co" target="__blank">Shaya Selincourt</a>.</p>
+        <p>Made with ❤ by <a href="https://github.com/sselin-co" target="__blank">Shaya Selincourt</a>. GitHub repo <a href="https://github.com/sselin-co/sselin-co.github.io">here.</a></p>
       </div>
     </footer>
   </div>
-    </main>
-  
+  </main>
+  <script>
+    var modalInfo = {
+  1: {
+    title: "Project Access Platform",
+    info: "Winning MVP proposal for Project Access Austria's online platform as part of the first Menon Labs cohort",
+    link: "https://pa-platform.vercel.app/",
+    github: "https://github.com/sselin-co/Project-Access-Platform"
+  },
+  2: {
+    title: "Epidemic Simulator App",
+    info: "Android app that simulates disease growth in a closed population. Masks and social distancing analogs have been implemented to demonstrate the importance of following public health guidelines.",
+    link: "https://drive.google.com/file/d/11T12w8_TX7nBtGUD7R_7m4hj8vPjH8dp/view?usp=sharing",
+    github: "https://github.com/sselin-co/Epidemic-Simulator"
+  },
+  3: {
+    title: "BCHacks 2.0 Event Website",
+    info: "...",
+    link: "https://bchacks.io/",
+    github: "https://github.com/sselin-co/BCHacks2.0"
+  },
+  4: {
+    title: "Project 4",
+    info: "....",
+    link: "#",
+    github: "#"
+  },
+  5: {
+    title: "Project 5",
+    info: "...",
+    link: "#",
+    github: "#"
+  },
+  6: {
+    title: "Project 6",
+    info: "...",
+    link: "#",
+    github: "#"
+  }
+};
+
+// Get the modal
+var modal = document.getElementById('preview');
+
+// button that opens the modal
+var btn = document.getElementsByClassName("button");
+
+// <span> that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// open modal 
+for(let i = 0; i < btn.length; i++){
+  btn[i].addEventListener("click", function() {
+    var project = btn[i].parentElement;
+    openModal(project);
+  })
+};
+
+function openModal(project){
+  var id = project.id;
+  var img = project.getElementsByTagName("img")[0].src;
+  fillOut(id, img);
+  modal.style.display = "block";
+  document.getElementsByClassName("modal-content")[0].classList.add("scale");
+}
+
+function fillOut(id, img){
+  document.getElementById("title").innerHTML = modalInfo[id].title;
+  document.getElementById("info").innerHTML = modalInfo[id].info;
+  document.getElementById("img").src = img;
+  document.getElementById("live").onclick = function(){
+    window.open(modalInfo[id].link,'_blank');
+  }
+  document.getElementById("github").onclick = function(){
+    window.open(modalInfo[id].github,'_blank');
+  }
+}
+
+// close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+  </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
-  <script src="scripts/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
   <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/CodingTrain/QuadTree/quadtree.js"></script>
   <script src="scripts/sketch.js"></script>
