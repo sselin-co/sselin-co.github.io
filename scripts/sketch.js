@@ -56,7 +56,7 @@ function show(quadTree) {
     noFill();
     strokeWeight(1);
     rectMode(CENTER);
-    if (quadTree.points.length == 0){
+    if (quadTree.capacity == 0){
         fill(40,50,60);
         rect(quadTree.boundary.x, quadTree.boundary.y, quadTree.boundary.w * 2, quadTree.boundary.h * 2);
     }
