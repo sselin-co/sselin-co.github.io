@@ -14,7 +14,8 @@ a:hover {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
   background-color: #fff;
   border: 0.05rem solid #fff;
   margin: 30px;
@@ -93,6 +94,36 @@ body {
 .masthead-brand {
   margin-bottom: 0;
   float: left;
+  font-family: monospace;
+  font-size: 1.5rem;
+  white-space: pre;
+}
+
+.grey {
+  color: grey;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  height: 0.2em;
+  background-color: grey;
+  vertical-align: bottom;
+  margin-left: 1px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .nav-masthead {
@@ -112,7 +143,7 @@ body {
   border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
-.nav-masthead .nav-link + .nav-link {
+.nav-masthead .nav-link+.nav-link {
   margin-left: 2rem;
 }
 
@@ -127,15 +158,18 @@ body {
     display: block;
     text-align: center;
   }
+
   .nav-link {
     float: none;
     display: block;
     text-align: center;
   }
+
   .masthead-brand {
     float: none;
   }
-  .nav-masthead .nav-link + .nav-link {
+
+  .nav-masthead .nav-link+.nav-link {
     margin-left: 0rem;
   }
 }
@@ -159,10 +193,12 @@ body {
 .cover {
   padding: 0 1.5rem;
 }
+
 .cover .btn-lg {
   padding: 0.75rem 1.25rem;
   font-weight: 700;
 }
+
 .lead {
   max-width: 30em;
   font-size: x-large;
@@ -294,6 +330,7 @@ img {
   from {
     transform: scale(0);
   }
+
   to {
     transform: scale(1);
   }
